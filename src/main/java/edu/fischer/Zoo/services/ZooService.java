@@ -14,13 +14,18 @@ public class ZooService
 
     public ZooService() {
     }
-public void saveCare (Caretaker caretaker) {
+    public void saveCare (Caretaker caretaker) {
         zooDao.save(caretaker);
 }
 
-public void deleteCare (Caretaker caretaker) {
+    public void deleteCare (Caretaker caretaker) {
         zooDao.delete(caretaker);
 }
+
+    public void updateCare (Caretaker caretaker) {
+        zooDao.update(caretaker);
+    }
+
     public Caretaker findById(int id) {
         return zooDao.findById(id);
     }
@@ -36,6 +41,12 @@ public void deleteCare (Caretaker caretaker) {
     public Caretaker findCare (int id) {
         return zooDao.findCareById(id);
     }
+
+    public void delCareById (int id) {
+        zooDao.delCareById(id);
+    }
+
+
 
     public List<Animal> findAll() {
         return zooDao.findAllAnim();

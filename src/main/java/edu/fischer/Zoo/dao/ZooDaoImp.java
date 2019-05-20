@@ -22,7 +22,8 @@ public class ZooDaoImp implements ZooDao
         session.save(caretaker);
         tx1.commit();
         session.close();
-    }@Override
+    }
+    @Override
     public void update (Caretaker caretaker) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Transaction tx1 = session.beginTransaction();
@@ -53,6 +54,17 @@ public class ZooDaoImp implements ZooDao
     @Override
     public Caretaker findCareById(int id) {
         return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(Caretaker.class, id);
+    }
+
+    @Override
+    public void delCareById(int id) {
+        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Transaction tx1 = session.beginTransaction();
+        Caretaker caretaker = session.get(Caretaker.class, id);
+        session.delete(caretaker);
+        tx1.commit();
+        session.close();
+
     }
 
     @Override

@@ -23,5 +23,7 @@ public interface ZooDao
 
     public Caretaker findCareById (int id);
 
+    public void delCareById (int id);
+
     public List<Animal> findAllAnim();
 }
