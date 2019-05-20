@@ -1,8 +1,8 @@
-package utils;
+package edu.fischer.Zoo.utils;
 
-import models.Animal;
-import models.Caretaker;
-import models.Cell;
+import edu.fischer.Zoo.models.Animal;
+import edu.fischer.Zoo.models.Caretaker;
+import edu.fischer.Zoo.models.Cell;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;

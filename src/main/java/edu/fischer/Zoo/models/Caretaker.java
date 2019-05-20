@@ -1,4 +1,4 @@
-package models;
+package edu.fischer.Zoo.models;
 
 import javax.persistence.*;
 import java.util.ArrayList;

@@ -1,11 +1,11 @@
-package dao;
+package edu.fischer.Zoo.dao;
 
-import models.Animal;
-import models.Caretaker;
-import models.Cell;
+import edu.fischer.Zoo.models.Animal;
+import edu.fischer.Zoo.models.Caretaker;
+import edu.fischer.Zoo.models.Cell;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import utils.HibernateSessionFactoryUtil;
+import edu.fischer.Zoo.utils.HibernateSessionFactoryUtil;
 
 import java.util.List;
 

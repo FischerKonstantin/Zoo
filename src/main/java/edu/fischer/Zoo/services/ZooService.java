@@ -1,9 +1,9 @@
-package services;
+package edu.fischer.Zoo.services;
 
-import dao.ZooDaoImp;
-import models.Animal;
-import models.Caretaker;
-import models.Cell;
+import edu.fischer.Zoo.dao.ZooDaoImp;
+import edu.fischer.Zoo.models.Animal;
+import edu.fischer.Zoo.models.Caretaker;
+import edu.fischer.Zoo.models.Cell;
 
 import java.util.List;
 
@@ -16,6 +16,10 @@ public class ZooService
     }
 public void saveCare (Caretaker caretaker) {
         zooDao.save(caretaker);
+}
+
+public void deleteCare (Caretaker caretaker) {
+        zooDao.delete(caretaker);
 }
     public Caretaker findById(int id) {
         return zooDao.findById(id);
