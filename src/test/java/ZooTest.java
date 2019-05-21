@@ -19,27 +19,18 @@ public class ZooTest
         logger.info("{}", caretaker);
         zooService.saveCare(caretaker);
         //TODO Доделать
-        Animal animal = new Animal("Гена", "Крокодил", 7);
-
-        caretaker.addAnimals(animal);
+        caretaker.setSurname("Костина");
+        logger.info("{}", caretaker);
         zooService.updateCare(caretaker);
 //        zooService.deleteCare(caretaker); //Удалить внесенного служителя
     }
 
-    @Test
-    public void updZoo() {
-        ZooService zooService = new ZooService();
-        Caretaker caretaker = new Caretaker();
-        Animal animal = new Animal("Гена", "Крокодил", 7);
-        caretaker.addAnimals(animal);
-        zooService.updateCare(caretaker);
-    }
 
     @Test
     public void deleteZoo() {
         ZooService zooService = new ZooService();
         //Удалить служителя из БД по id
-        zooService.delCareById(8);
+        zooService.delCareById(10);
     }
 
 }
